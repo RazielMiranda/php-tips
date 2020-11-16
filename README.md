@@ -15,13 +15,15 @@
 
 4. CONFIGURAÇÕES DA PSR-4
 
-    //diretorio de fornecedores de pacotes
+    //CONFIOGURAÇÃO DA ONDE FICA OS COMPONENTES COMO PADRÃO JA VEM ASSIM
     "config": {
         "vendor-dir": "vendor"
     },
 
-    //isso faz com que o autoload se torne comum no projeto 
-    "autoload": {
+    //DIZ PARA O COMPOSER QUAIS OS ARQUIVOS QUE TEM QUE CARREGAR AUTOMATICAMENTE
+    //APENAS COM UM REQUIRE JA CARREGA TUDO QUE PRECISAMOS
+    //DIRETORIO ONDE CARREGA AS CLASSES NO CASO O SOURCE/
+    //QUANDO RODAR O COMPOSER JA AUTOMATICAMENTE INCLUI O CONFIG.PHP    "autoload": {
         "psr-4":{
             "Source\\": "source/"
         },
@@ -30,7 +32,10 @@
         ]
     },
 
-    //componetents pro projeto funcionar
+    //COMPONENTES PARA O PROJETO FUNCIONAR
     "require": {
+        //DIZ PARA PEGAR O COMPONENTE MAIS NOVO
         "phpmailer/phpmailer": "6.0.*"
     }
+
+5. composer update
