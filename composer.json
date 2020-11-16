@@ -1,6 +1,6 @@
 {
-    "name": "razielmiranda/php-tips",
-    "description": "PHP TIPS PROJECT",
+    "name": "razielmiranda/projeto",
+    "description": "...",
     "minimum-stability": "stable",
     "license": "MIT",
     "authors": [
@@ -23,6 +23,5 @@
         ]
     },
     "require": {
-        "phpmailer/phpmailer": "6.0.*"
     }
 }
