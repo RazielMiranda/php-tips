@@ -1,4 +1,5 @@
 <?php
+//! CONFIGURAR COM OS DADOS DO SERVIDOR
 define("MAIL",[
     "host" => "",
     "port" => "",

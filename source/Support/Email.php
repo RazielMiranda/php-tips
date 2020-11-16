@@ -13,7 +13,7 @@ class Email
 
     public function __construct()
     {
-        $this->mail = new PHPMailer(exception: true);
+        $this->mail = new PHPMailer( exception: true);
         $this->data = new stdClass();
 
         $this->mail->isSMTP();
