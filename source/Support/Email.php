@@ -46,7 +46,7 @@ class Email
         try {
             $this->mail->Subject = $this->data->subject;
             $this->mail->msgHTML($this->data->body);
-            $this->mail->addAdrress($this->data->recipient_email, $this->data->recipient_name);
+            $this->mail->addAddress($this->data->recipient_email, $this->data->recipient_name);
             $this->mail->setFrom($from_email, $from_name);
             if(!empty($this->data->attach)){
                 foreach($this->data->attach as $path => $name){
