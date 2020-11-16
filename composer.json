@@ -1,6 +1,6 @@
 {
     "name": "razielmiranda/projeto",
-    "description": "...",
+    "description": "Criar um componente de email com PHPMAILLER",
     "minimum-stability": "stable",
     "license": "MIT",
     "authors": [
@@ -23,5 +23,6 @@
         ]
     },
     "require": {
+        "phpmailer/phpmailer": "6.0.7"
     }
 }
