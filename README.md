@@ -8,14 +8,16 @@
     - criar arquivo composer.json para iniciar o projeto
 
 3. CONFIGURAR COMPOSER.JSON
-    - "name": "RazielMiranda/php-tips", //Nome do GIT
-    - "minimum-stability": "stable", //Versao minima pra rodar o projeto
+    - rodar: composer init
+        - vai gerar o composer.json dai configurar conforme o projeto
+    - "name": "razielmiranda/php-tips", //Nome do GIT
+    - "minimum-stability": "stable", //VERSAO MINIMA PARA O PROJETO RODAR
     - "license": "PROPRIETARY" // QUANDO O CODIGO NAO FOR SEU OU DE CLIENTE
     - "license": "MIT" //CODIGO LIVRE
 
 4. CONFIGURAÇÕES DA PSR-4
 
-    //CONFIOGURAÇÃO DA ONDE FICA OS COMPONENTES COMO PADRÃO JA VEM ASSIM
+    //CONFIGURAÇÃO DA ONDE FICA OS COMPONENTES COMO PADRÃO JA VEM ASSIM
     "config": {
         "vendor-dir": "vendor"
     },
