@@ -1,6 +1,5 @@
 <?php
 namespace Source\Support;
-
 use FFI\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 use stdClass;
@@ -13,17 +12,14 @@ class Email
 
     public function __construct()
     {
-        $this->mail = new PHPMailer( exception: true);
+        $this->mail = new PHPMailer();
         $this->data = new stdClass();
-
         $this->mail->isSMTP();
         $this->mail->isHTML();
-
-        // $this->mail->setLanguage( langcode: 'br');
+        $this->mail->setLanguage('br');
         $this->mail->SMTPAuth = true;
         $this->mail->SMTPSecure = "tls";
         $this->mail->CharSet = "utf-8";
-
         $this->mail->Host = MAIL["host"];
         $this->mail->Port = MAIL["port"];
         $this->mail->Username = MAIL["user"];
@@ -36,7 +32,6 @@ class Email
         $this->data->body = $body;
         $this->data->recipient_name = $recipient_name;
         $this->data->recipient_email = $recipient_email;
-
         return $this;
     }
 
@@ -53,15 +48,12 @@ class Email
             $this->mail->msgHTML($this->data->body);
             $this->mail->addAdrress($this->data->recipient_email, $this->data->recipient_name);
             $this->mail->setFrom($from_email, $from_name);
-
             if(!empty($this->data->attach)){
                 foreach($this->data->attach as $path => $name){
                     $this->mail->addAttachment($path, $name);
                 }
             }
-
             $this->mail->send();
-
         } catch (Exception $exception) {
             $this->error = $exception;
             return false;
